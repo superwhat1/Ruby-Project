@@ -1,0 +1,58 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body { 
+	margin:0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+}
+
+html {
+	position: absolute;
+	min-height:100em;
+}
+
+body {
+	height: 100%;
+	position: absolute;
+}
+
+a {
+	text-decoration: none;
+}
+
+.nav_bar{
+	position: fixed;
+	top: 0;
+	height:5%;
+	width:100%;
+	background: rgb(104,237,227);
+	z-index: 999;
+}
+
+.header_welcome {
+	position:relative;
+	background: green;
+	height:22%;
+	width: 100%;
+}
+
+.main_welcome {
+	position: relative;
+	background: rgb(63,130,186);
+	margin: 0 auto;
+	width:100%;
+	min-height: 47%;
+}
+
+.footer{
+	position: relative;
+	height:8%;
+	width: 100%;
+	background: rgb(0,0,0) url("footer.png") repeat fixed;
+}
+
+.link_to_browse {
+	
+}
