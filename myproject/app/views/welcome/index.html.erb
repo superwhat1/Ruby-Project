@@ -10,6 +10,21 @@
 
 <div class="main_welcome"> 
 <%= link_to "Browse", browse_index_path, class: "link_to_browse" %>
+
+<table>
+<tbody>
+<% @user.each do |user| %>
+<tr>
+<td> 
+<%= link_to(user) do %>
+	<%= user.username %> 
+<% end %>
+</td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
 </div>
 
 <div class="footer">
