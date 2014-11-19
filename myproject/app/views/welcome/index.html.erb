@@ -9,22 +9,17 @@
 </div> 
 
 <div class="main_welcome"> 
+<div class="center_div"> 
+
 <%= link_to "Browse", browse_index_path, class: "link_to_browse" %>
 
-<table>
-<tbody>
-<% @user.each do |user| %>
-<tr>
-<td> 
-<%= link_to(user) do %>
-	<%= user.username %> 
-<% end %>
-</td>
-</tr>
-<% end %>
-</tbody>
-</table>
+<%= div_for(@user, class: "user_div") do |user|%>
+	<%= link_to(user) do %>
+		<%= user.username %>
+	<% end -%>
+<% end -%>
 
+</div>
 </div>
 
 <div class="footer">
