@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  validates :password, length:{8..128}, presence:true 
+  validates :username, uniqueness: true, presence: true
+  
+  has_many: comments
+
   # GET /users
   # GET /users.json
   def index
@@ -69,6 +74,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :password, :name, :description)
+      params[:user]
     end
 end

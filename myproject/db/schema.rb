@@ -11,21 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119135908) do
+ActiveRecord::Schema.define(version: 20141212181652) do
 
   create_table "comments", force: true do |t|
-    t.integer  "user_id"
     t.text     "comment_area"
-    t.integer  "occupancy_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "user_type"
   end
+
+  add_index "comments", ["user_id", "user_type"], name: "index_comments_on_user_id_and_user_type"
 
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "password"
-    t.string   "name"
-    t.text     "description"
+    t.text     "desciption"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
