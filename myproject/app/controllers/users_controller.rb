@@ -1,11 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  validates :password, length:{8..128}, presence:true 
-  validates :username, uniqueness: true, presence: true
-  
-  has_many: comments
-
   # GET /users
   # GET /users.json
   def index

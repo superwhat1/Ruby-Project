@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :users
+
+  resources :users do
+    resources :comments
+  end
 
   get 'welcome/index'
   get 'browse/index'
